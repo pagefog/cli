@@ -1,17 +1,47 @@
 #!/usr/bin/env php
 <?php
+
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader
+| for our application. We just need to utilize it! We'll require it
+| into the script here so that we do not have to worry about the
+| loading of any our classes "manually". Feels great to relax.
+|
+*/
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Symfony\Component\Console\Application;
+use Illuminate\Console\Application;
+use Illuminate\Container\Container;
+use Illuminate\Events\Dispatcher;
 
 $commands = [
 	Commands\Sites\DeployCommand::class,
 ];
 
-$app = new Application("pagefog", "1.0");
+$container = new Container();
+$dispatcher = new Dispatcher();
+
+$app = new Application($container, $dispatcher, '1.0');
+$app->setName('pagefog');
 
 foreach ($commands as $command) {
 	$app->add(new $command);
 }
+
+/*
+|--------------------------------------------------------------------------
+| Run The Pagefog Application
+|--------------------------------------------------------------------------
+|
+| When we run the console application, the current CLI command will be
+| executed in this console and the response sent back to a terminal
+| or another output device for the developers. Here goes nothing!
+|
+*/
 
 $app->run();
