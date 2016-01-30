@@ -24,7 +24,7 @@ $commands = [
 ];
 
 $container = new Container();
-$dispatcher = new Dispatcher();
+$dispatcher = new Dispatcher($container);
 
 $app = new Application($container, $dispatcher, '1.0');
 $app->setName('pagefog');
