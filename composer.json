@@ -1,6 +1,6 @@
 {
 	"name": "pagefog/cli",
-	"description": "Command line tools for interacting with the Pagefog.",
+	"description": "Command line tools for interacting with Pagefog.",
 	"homepage": "http://pagefog.com",
 	"type": "library",
 	"authors": [
