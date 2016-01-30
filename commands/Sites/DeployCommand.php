@@ -5,19 +5,19 @@ use Illuminate\Console\Command;
 class DeployCommand extends Command
 {
 	/**
-	 * The console command name.
+	 * The name and signature of the console command.
 	 *
 	 * @var string
 	 */
-	protected $name = 'site:deploy';
-
+	protected $signature = 'site:deploy';
+	
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
 	protected $description = 'Deploy the local changes to a live site';
-
+	
 	/**
 	 * Execute the console command.
 	 *
