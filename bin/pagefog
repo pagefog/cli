@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$commands = [
+	Commands\Sites\DeployCommand::class,
+];
+
+$app = new Application("pagefog", "1.0");
+
+foreach ($commands as $command) {
+	$app->add(new $command);
+}
+
+$app->run();

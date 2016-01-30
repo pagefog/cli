@@ -8,9 +8,17 @@
 			"email": "team@pagefog.com"
 		}
 	],
+	"bin": [
+		"bin/pagefog"
+	],
 	"require": {
 		"php": ">=5.6.4",
 		"illuminate/console": "5.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Commands\\": "commands"
+		}
 	},
 	"minimum-stability": "stable"
 }
