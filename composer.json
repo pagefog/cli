@@ -1,5 +1,17 @@
 {
-    "require": {
-        "illuminate/console": "5.*"
-    }
+	"name": "pagefog/cli",
+	"description": "Command line tools for interacting with the Pagefog.",
+	"homepage": "http://pagefog.com",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Pagefog",
+			"email": "team@pagefog.com"
+		}
+	],
+	"require": {
+		"php": ">=5.6.4",
+		"illuminate/console": "5.*"
+	},
+	"minimum-stability": "stable"
 }
