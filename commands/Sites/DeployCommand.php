@@ -16,7 +16,7 @@ class DeployCommand extends Command
 	 *
 	 * @var string
 	 */
-	protected $description = 'Deploy the local changes to a live site';
+	protected $description = 'Push/deploy the local file changes to a live site.';
 	
 	/**
 	 * Execute the console command.
