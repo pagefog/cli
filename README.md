@@ -4,6 +4,8 @@ This is a tool to make it easy to use command line to interface with Pagefog.
 
 # Todo
 
+* Consider just using https://github.com/c10b10/wp-cli-deploy and skipping all this work
+
 * Check for auth/api key first run
 * Store config in ~/.pgfog
 * Setup API helper calls
